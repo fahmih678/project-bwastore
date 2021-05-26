@@ -18,6 +18,8 @@ class Transaction extends Model
         'transaction_status',
         'total_price',
         'code',
+        'shipping_status',
+        'resi',
     ];
 
     /**
