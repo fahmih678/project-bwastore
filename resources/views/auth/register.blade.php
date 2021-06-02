@@ -160,7 +160,7 @@
                                 >
                                 Sign Up Now
                             </button>
-                            <a href="{(route('login'))}" class="btn btn-signup mt-2">
+                            <a href="{{ route('login') }}" class="btn btn-signup mt-2">
                                 Back to Sign In
                             </a>
                         </form>

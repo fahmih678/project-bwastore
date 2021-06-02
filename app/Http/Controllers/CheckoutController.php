@@ -35,7 +35,9 @@ class CheckoutController extends Controller
             'shipping_price' => 0,
             'total_price' => $request->total_price,
             'transaction_status' => 'PENDING',
-            'code' => $code
+            'code' => $code,
+            'shipping_status' => 'PENDING',
+            'resi' => ''
         ]);
 
         foreach ($carts as $cart) {

@@ -35,6 +35,10 @@
                         class="list-group-item list-group-item-action {{ (request()->is('dashboard/transactions')) ? 'active' : '' }}">
                         Transactions
                     </a>
+                    <a href="{{ route('dashboard-myorder') }}"
+                        class="list-group-item list-group-item-action {{ (request()->is('dashboard/myorder')) ? 'active' : '' }}">
+                        My Order
+                    </a>
                     <a href="{{ route('dashboard-setting-account') }}" 
                         class="list-group-item list-group-item-action {{ (request()->is('dashboard/account')) ? 'active' : '' }}">
                         My Account

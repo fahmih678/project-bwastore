@@ -18,6 +18,12 @@ class DashboardController extends Controller
                 $product->where('users_id', Auth::user()->id);
             });
 
+        //Demo
+        $usertransactions = TransactionDetail::with(['transaction.user', 'product.galleries'])
+            ->whereHas('transaction', function ($transaction) {
+                $transaction->where('users_id', Auth::user()->id);
+            });
+
         $revenue = $transactions->get()->reduce(function ($cary, $item) {
             return $cary + $item->price;
         });
